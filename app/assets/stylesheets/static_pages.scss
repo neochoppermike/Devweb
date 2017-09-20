@@ -1,3 +1,165 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html, body {
+	height: 100%;
+}
+
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -80px;
+}
+
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+
+h1 {
+	font-family: Satisfy;
+	color: #00cc00;
+	text-align: center;
+	font-size: 400%;
+}
+
+@media (min-width: 1176px) {
+
+.navbar-brand {
+	font-family: Satisfy;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none; 
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar .navbar-collapse ul li {
+	padding: 0 10px;
+}
+
+.navbar .navbar-collapse ul {
+	margin-right: 50px;
+}
+
+.navbar-collapse ul li a {
+	font-family: Biryani;
+	font-size: 150%;
+}
+
+.navbar {	
+	background-color: #94c4f4;
+	height: 110px;
+}
+
+.navbar-header a {
+	font-size: 150%;
+}
+
+
+.navbar-default .navbar-brand {
+	color: #4d4d4d;
+}
+
+.navbar .navbar-nav>li>a {
+    color: white;
+    margin-top: 35px;
+}
+
+
+.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, {
+    color: white;
+    background-color: #94c4f4;
+    border: solid 2px white;    
+}
+
+.navbar .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #b6b835;
+}
+
+.navbar .navbar-nav>.active>a:hover {
+	color: #94c4f4;
+	background-color: white;
+}
+}
+
+@media (max-width: 1175px) {
+
+.navbar-brand {
+	font-family: Satisfy;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none; 
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar .navbar-collapse ul {
+	margin-right: 50px;
+}
+
+.navbar-collapse ul li a {
+	font-family: Biryani;
+	font-size: 150%;
+}
+
+.navbar {	
+	background-color: #94c4f4;	
+}
+
+.navbar-header a {
+	font-size: 150%;
+}
+
+
+.navbar-default .navbar-brand {
+	color: #4d4d4d;
+}
+
+.navbar .navbar-nav>li>a {
+    color: white;
+}
+
+
+.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, {
+    color: white;
+    background-color: #94c4f4;
+    border: solid 2px white;    
+}
+
+.navbar .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #b6b835;
+}
+
+.navbar .navbar-nav>.active>a:hover {
+	color: #94c4f4;
+	background-color: white;
+}
+}
+
+.site-footer, .page-wrap:after {
+	height: 80px;
+}
+
+.site-footer {
+	background: #ef9d54;
+}
+
+.copyright {
+	float: right;
+	display: inline;
+}
+
+.site-footer {
+	padding: 1em;
+}
+
+
