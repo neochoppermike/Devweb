@@ -34,12 +34,8 @@ h1 {
   text-align: center;
 }
 
-.navbar .navbar-collapse ul li {
-	padding: 0 10px;
-}
-
 .navbar .navbar-collapse ul {
-	margin-right: 50px;
+	margin-right: 10px;
 }
 
 .navbar-collapse ul li a {
@@ -148,16 +144,21 @@ h1 {
 }
 
 .site-footer {
-	background: #d9631e;
+	background: #e42e1d;
 }
 
 .copyright {
 	float: right;
 	display: inline;
+	color: white;
 }
 
 .site-footer {
 	padding: 1em;
+}
+
+.twitter-follow-button {
+	color: white;
 }
 
 
