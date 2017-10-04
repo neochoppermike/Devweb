@@ -19,23 +19,16 @@ h1 {
 	font-size: 400%;
 }
 
+h4 {
+	font-family: Satisfy;
+	color: #00cc00;
+	text-align: center;
+}
+
 @media (min-width: 1176px) {
 
 .navbar-brand {
 	font-family: Satisfy;
-}
-
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none; 
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
-.navbar .navbar-collapse ul {
-	margin-right: 10px;
 }
 
 .navbar-collapse ul li a {
@@ -49,7 +42,8 @@ h1 {
 }
 
 .navbar-header a {
-	font-size: 150%;
+	font-size: 300%;
+	padding: 30px;
 }
 
 
@@ -165,6 +159,27 @@ p {
     padding: 20px
 }
 
-.geek {
-	padding-left: 20px
+.cow {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.carousel-controls{
+    position:relative; 
+    width:300px;
+    margin: auto;
+}
+
+.carousel-caption {
+	font-family: Satisfy;
+    font-size: 600%;
+}
+
+.milking {
+	margin: auto;
+}
+
+.cowphone {
+	margin: auto;
 }
