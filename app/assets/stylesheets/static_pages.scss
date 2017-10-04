@@ -1,6 +1,10 @@
+/*-----------sticky footer-------------*/
+
+
 html, body {
 	height: 100%;
 }
+
 
 .page-wrap {
 	min-height: 100%;
@@ -11,6 +15,32 @@ html, body {
 	content: "";
 	display: block;
 }
+
+.site-footer, .page-wrap:after {
+	height: 80px;
+}
+
+.site-footer {
+	background: #e42e1d;
+}
+
+.copyright {
+	float: right;
+	display: inline;
+	color: white;
+}
+
+.site-footer {
+	padding: 1em;
+}
+
+.twitter-follow-button {
+	color: white;
+}
+
+
+/*---------------General---------------*/
+
 
 h1 {
 	font-family: Satisfy;
@@ -24,6 +54,16 @@ h4 {
 	color: #00cc00;
 	text-align: center;
 }
+
+p {
+    padding: 20px;
+    font-family: Pangolin;
+    font-size: 120%;
+}
+
+
+/*----------------navbar---------------*/
+
 
 @media (min-width: 1176px) {
 
@@ -115,7 +155,6 @@ h4 {
     color: white;
 }
 
-
 .navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, {
     color: white;
     background-color: #94c4f4;
@@ -133,37 +172,9 @@ h4 {
 }
 }
 
-.site-footer, .page-wrap:after {
-	height: 80px;
-}
 
-.site-footer {
-	background: #e42e1d;
-}
+/*----------------carousel------------*/
 
-.copyright {
-	float: right;
-	display: inline;
-	color: white;
-}
-
-.site-footer {
-	padding: 1em;
-}
-
-.twitter-follow-button {
-	color: white;
-}
-
-p {
-    padding: 20px
-}
-
-.cow {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 .carousel-controls{
     position:relative; 
@@ -176,10 +187,11 @@ p {
     font-size: 600%;
 }
 
-.milking {
+
+/*-----------------images--------------*/
+
+
+.cow {	
 	margin: auto;
 }
 
-.cowphone {
-	margin: auto;
-}
