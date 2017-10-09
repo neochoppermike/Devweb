@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 
 
 group :development, :test do
@@ -59,4 +59,5 @@ gem 'jquery-rails'
 #gem to communicate with PostgreSQL database that Heroku runs- only needed by Heroku (production environment)
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
