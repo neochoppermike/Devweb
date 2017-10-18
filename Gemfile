@@ -56,5 +56,4 @@ gem 'jquery-rails'
 #gem to communicate with PostgreSQL database that Heroku runs- only needed by Heroku (production environment)
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
 end
