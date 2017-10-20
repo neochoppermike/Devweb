@@ -1,7 +1,13 @@
 
 <div class="container">
   <div class="row">
-     <%= render @products %>
+
+    <%= render @products %>
+
+    <div class="new-product-link">
+      <%= link_to 'New Product', new_product_path %>
+    </div>
+  
   </div>
 </div>
 
@@ -11,4 +17,3 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
