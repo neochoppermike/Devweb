@@ -10,13 +10,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Biryani">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!--link to bootstrap js after JS include tag because BS depends on JQuery- loaded with all other JS-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!--for responsive app-->
-
-
   </head>
 
   <body>
@@ -38,8 +35,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           
-          <li><a href="/static_pages/about">About us</a></li>
-          <li><a href="/static_pages/contact">Contact our Cows</a></li>
+          <li><%= link_to "About us", static_pages_about_path %></li>
+          <li><%= link_to "Contact our cows", static_pages_contact_path %></li>
           <li><%= link_to "The Cow Shed", products_path %></li>
           <li><%= link_to "Buy a Cow", orders_path %></a></li>
           <li><a href="#">login</a></li>

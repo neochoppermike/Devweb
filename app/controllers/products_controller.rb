@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    @test_variable = 42
   end
 
   # GET /products/1
@@ -29,7 +28,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_back(fallback_location: products_path) }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
