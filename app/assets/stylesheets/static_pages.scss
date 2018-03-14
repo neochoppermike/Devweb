@@ -116,6 +116,10 @@ p {
 	color: #94c4f4;
 	background-color: white;
 }
+
+.search {
+	margin-top: 30px;
+}
 }
 
 @media (max-width: 1175px) {
@@ -174,6 +178,10 @@ p {
 	color: #94c4f4;
 	background-color: white;
 }
+
+.search {
+	margin-bottom: 10px;
+}
 }
 
 
@@ -195,7 +203,10 @@ p {
 /*-----------------images--------------*/
 
 
-.cow {	
+.cow, .show-pic {	
 	margin: auto;
 }
 
+.cowcopter {
+	
+}

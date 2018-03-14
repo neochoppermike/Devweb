@@ -39,8 +39,22 @@
           <li><%= link_to "Contact our cows", static_pages_contact_path %></li>
           <li><%= link_to "The Cow Shed", products_path %></li>
           <li><%= link_to "Buy a Cow", orders_path %></a></li>
-          <li><a href="#">login</a></li>
         </ul>
+
+
+        <div class="search">
+          <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form navbar-right") do |form| %>
+            <div class="form-group"> 
+              
+              <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
+            
+            </div>  
+              
+              <%= form.submit 'Search', class: "btn btn-default" %>           
+          <% end %>
+        </div>
+
+
       </div> <!--/navbar collapse-->
     </div> <!--/container fluid-->
   </nav>
