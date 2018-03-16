@@ -1,4 +1,19 @@
-When you buy a cow from intercow,com, we go the extra mile to make sure you're completely satisfied. Not only is our after-cow service second to none, but each order qualifies for free delivery! And if you're purchasing a cow for a loved one, we even include the option of gift-wrap service- all for free! 
+<div class="row">
+  <% @orders.each do |order| %>
+    <div class="col-sm-2 col-md-4">
+      <h2>Order # <%= order.id %></h2>
+      <%= link_to order.product.name, order.product %>
+      <p><%= order.product.description %></p>
+      <strong>$ <%= order.product.price %></strong>
+      <p><%= link_to 'Show', order %></p>
+    </div><!-- /col -->
+  <% end %>
+</div>
+
+
+<h1>Don't forget...</h1>
+
+<p>When you buy a cow from intercow,com, we go the extra mile to make sure you're completely satisfied. Not only is our after-cow service second to none, but each order qualifies for free delivery! And if you're purchasing a cow for a loved one, we even include the option of gift-wrap service- all for free!</p> 
 
 
 <%= image_tag("helicopter-cow.jpg", class: "img-responsive cowcopter") %>
