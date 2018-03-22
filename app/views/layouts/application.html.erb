@@ -34,13 +34,20 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          
           <li><%= link_to "About us", static_pages_about_path %></li>
           <li><%= link_to "Contact our cows", static_pages_contact_path %></li>
           <li><%= link_to "The Cow Shed", products_path %></li>
           <li><%= link_to "Buy a Cow", orders_path %></a></li>
+          <li>
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+             <% end %>
+          </li>
         </ul>
-
+        
+        
 
         <div class="search">
           <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form navbar-right") do |form| %>
@@ -59,13 +66,16 @@
     </div> <!--/container fluid-->
   </nav>
 
-    <%= yield %>
-</div>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
   
-  <footer>
-    <div class="site-footer">
-    <a href="https://twitter.com/neochopper" class="twitter-follow-button" data-show-count="false">Follow @twitter</a>
-    <div class="copyright">&copy Inter-Cow.com 2017</div>
+  </div>
+    <footer>
+      <div class="site-footer">
+      <a href="https://twitter.com/neochopper" class="twitter-follow-button" data-show-count="false">Follow @twitter</a>
+      <div class="copyright">&copy Inter-Cow.com 2017</div>
     </div>
   </footer>
 

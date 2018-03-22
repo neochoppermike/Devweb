@@ -42,7 +42,7 @@ html, body {
 /*---------------General---------------*/
 
 
-h1 {
+h1, h2 {
 	font-family: Satisfy;
 	color: #00cc00;
 	text-align: center;
@@ -101,20 +101,20 @@ p {
 }
 
 
-.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, {
+/*----.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, {
     color: white;
     background-color: #94c4f4;
     border: solid 2px white;    
 }
 
-.navbar .navbar-nav>li>a:hover {
-    color: white;
-    background-color: #b6b835;
-}
-
 .navbar .navbar-nav>.active>a:hover {
 	color: #94c4f4;
 	background-color: white;
+}*/
+
+.navbar .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #b6b835;
 }
 
 .search {
@@ -209,4 +209,10 @@ p {
 
 .cowcopter {
 	
+}
+
+/*--------------login views------------*/
+
+.devise-form {
+	margin: auto;
 }

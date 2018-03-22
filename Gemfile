@@ -55,6 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #add jQuery javascript library 
 gem 'jquery-rails'
 
+gem 'devise'
+
 #gem to communicate with PostgreSQL database that Heroku runs- only needed by Heroku (production environment)
 group :production do
   gem 'pg'
