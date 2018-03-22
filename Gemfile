@@ -57,6 +57,8 @@ gem 'jquery-rails'
 
 gem 'devise'
 
+gem 'cancancan', '~> 2.0'
+
 #gem to communicate with PostgreSQL database that Heroku runs- only needed by Heroku (production environment)
 group :production do
   gem 'pg'
