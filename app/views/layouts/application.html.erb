@@ -45,6 +45,26 @@
                   <%= link_to('Login', new_user_session_path) %>
                  <% end %>
               </li>
+              <% if user_signed_in? %>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="user_name"><%= current_user.first_name %></span>
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  
+                    <li><%= link_to "Profile", user_path(current_user) %></li>
+                  
+
+                    <li><%= link_to "Login Details", edit_user_registration_path(current_user) %></li>
+
+                    <li><%= link_to "Your Orders", order_path(current_user)%></li>
+                  </ul>
+                </li>
+              <% end %>
+              
+                
+              
+                  
+              
             </ul>
             
             <div class="search">
@@ -62,13 +82,19 @@
         </div> <!--/container fluid-->
       </nav>
 
-      <% if notice %>
-        <p class="alert alert-danger" role="alert" ><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger" role="alert"><%= alert %></p>
-      <% end %>
+      <script>
+        setTimeout("$('.fades').fadeOut('slow')", 5000)
+      </script>
+
       
+        <% if notice %>
+          <p class="alert alert-danger fades" role="alert" ><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger fades" role="alert"><%= alert %></p>
+        <% end %>
+      
+
       <%= yield %>
       
     </div>
