@@ -100,18 +100,6 @@ p {
     margin-top: 35px;
 }
 
-
-/*----.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, {
-    color: white;
-    background-color: #94c4f4;
-    border: solid 2px white;    
-}
-
-.navbar .navbar-nav>.active>a:hover {
-	color: #94c4f4;
-	background-color: white;
-}*/
-
 .navbar .navbar-nav>li>a:hover {
     color: white;
     background-color: #b6b835;
@@ -125,7 +113,30 @@ p {
 	font-family: Satisfy;
 	color: #4d4d4d;
 }
+
+.navbar .navbar-nav>li>a.dropdown-toggle:hover {
+	background-color: #94c4f4;
 }
+
+ul.dropdown-menu {
+	background-color: #94c4f4;
+}
+
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: #94c4f4;
+}
+
+.dropdown-menu > li > a {
+	color: white;
+}
+
+.dropdown-menu > li > a:hover {
+	color: white;
+    background-color: #b6b835;
+}
+}
+
+
 
 @media (max-width: 1175px) {
 
@@ -192,6 +203,29 @@ p {
 	font-family: Satisfy;
 	color: #4d4d4d;
 }
+
+.navbar .navbar-nav>li>a.dropdown-toggle:hover {
+	background-color: #94c4f4;
+}
+
+ul.dropdown-menu {
+	background-color: #94c4f4;
+}
+
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: #94c4f4;
+}
+
+.dropdown-menu > li > a {
+	color: white;
+}
+
+.dropdown-menu > li > a:hover {
+	color: white;
+    background-color: #b6b835;
+}
+
+
 }
 
 
