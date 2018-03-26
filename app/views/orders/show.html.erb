@@ -1,5 +1,6 @@
 <div class="container">
   <h2>Your Order History</h2>
+  <strong>Order Date: </strong><%= @order.created_at %>
   <strong>Order ID: </strong><%= @order.id %>
   <strong>Product Name: </strong><%= @order.product.name %>
   <strong>Product Price: </strong><%= number_to_currency(@order.product.price.to_f) %>
