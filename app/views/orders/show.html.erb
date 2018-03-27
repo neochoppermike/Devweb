@@ -1,10 +1,10 @@
 <div class="container">
   <h2>Your Order History</h2>
-  <strong>Order Date: </strong><%= @order.created_at %>
-  <strong>Order ID: </strong><%= @order.id %>
-  <strong>Product Name: </strong><%= @order.product.name %>
-  <strong>Product Price: </strong><%= number_to_currency(@order.product.price.to_f) %>
-  <strong>Total Price: </strong><%= number_to_currency(@order.total.to_f) %>
+  <p><strong>Order Date: </strong><%= @order.created_at.strftime("%d %b %y") %></p>
+  <p><strong>Order ID: </strong><%= @order.id %></p>
+  <p><strong>Product Name: </strong><%= @order.product.name %></p>
+  <p><strong>Product Price: </strong><%= number_to_currency(@order.product.price.to_f) %></p>
+  <p><strong>Total Price: </strong><%= number_to_currency(@order.total.to_f) %></p>
 </div>
 
 

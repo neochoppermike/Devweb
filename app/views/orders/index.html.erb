@@ -1,14 +1,16 @@
 <div class="row">
-  <% @orders.each do |order| %>
-    <div class="col-sm-2 col-md-4">
-      <h2>Order # <%= order.id %></h2>
-      <%= link_to order.product.name, order.product %>
-      <p><%= @order.created_at %></p>
-      <p><%= order.product.description %></p>
-      <strong>$ <%= order.product.price %></strong>
-      <p><%= link_to 'Show', order %></p>
-    </div><!-- /col -->
-  <% end %>
+  <h2>Your Orders</h2>
+  <% if @orders.present? %>
+    <% @orders.each do |order| %>
+      <div class="col-sm-2 col-md-4">
+        <h2>Order # <%= order.id %></h2>
+        <p><strong>Order Date: </strong><%= order.created_at.strftime("%d %b %y") %></p>
+        <p><%= link_to 'Show', order %></p>
+      </div><!-- /col -->
+    <% end %>
+  <% else %>
+    <p>You have no orders.</p>
+  <% end %>  
 </div>
 
 

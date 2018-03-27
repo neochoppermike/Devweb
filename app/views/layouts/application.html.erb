@@ -53,10 +53,12 @@
                   
                     <li><%= link_to "Profile", user_path(current_user) %></li>
                   
-
                     <li><%= link_to "Login Details", edit_user_registration_path(current_user) %></li>
-
-                    <li><%= link_to "Your Orders", order_path(current_user)%></li>
+                    
+                    <% if @orders.present? %>
+                      <li><%= link_to "My Orders", order_path(current_user)%></li>
+                    <% end %> 
+    
                   </ul>
                 </li>
               <% end %>
