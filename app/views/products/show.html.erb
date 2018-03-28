@@ -21,10 +21,10 @@
         £<%= @product.price %>	
       </p>
 
-      <p>
+      <!--<p>
         <strong>Average Customer Rating</strong>
         <%= @product.average_user_rating %>
-      </p>
+      </p>-->
 
       <p>
         <strong>Highest Rating</strong>
@@ -40,9 +40,16 @@
 </div>
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<!--<%= link_to 'Edit', edit_product_path(@product) %> |
 
-<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %> --> 
 
-<%= link_to 'Back', products_path %>
-http://localhost:3000/products
+<div class="container">
+  <div class="row">
+
+    <%= render 'new_comment' %>
+
+    <%= link_to 'Back', products_path, class: "btn btn-default pull-right" %>
+
+  </div>
+</div>
