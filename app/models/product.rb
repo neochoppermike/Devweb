@@ -18,9 +18,9 @@ class Product < ApplicationRecord
     comments.rating_asc.first if comments.count > 1
   end
 
-  def average_user_rating
-    comments.average(:rating).to_f
-  end  
+  def average_rating
+      comments.average(:rating).to_f
+  end
 
 end
 
