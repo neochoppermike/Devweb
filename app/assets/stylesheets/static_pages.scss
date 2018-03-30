@@ -102,6 +102,36 @@ p {
 	bottom: 0px;
 }
 
+/*------------pagination---------------*/
+
+
+.pagination {
+  background: #94c4f4;
+  padding: 8px;
+  
+
+  span, em, a {
+    padding: 8px;
+    color: #4d4d4d;
+  }
+  
+  a:hover {
+    background-color: #ccddff;
+    color: #4d4d4d;
+    text-decoration: none;
+  }
+  
+  .previous_page { background:#94c4f4; color:#4d4d4d; }
+  .current { background: #b6b835; color:#4d4d4d;}
+  .next_page { background: #94c4f4; color:#4d4d4d; }
+  
+  .disabled {
+    display:none;
+  }
+
+}
+
+
 /*----------------navbar---------------*/
 
 
@@ -137,6 +167,11 @@ p {
 }
 
 .navbar .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #b6b835;
+}
+
+.navbar .navbar-nav>li>a:active {
     color: white;
     background-color: #b6b835;
 }
@@ -211,14 +246,12 @@ ul.dropdown-menu {
 	color: #4d4d4d;
 }
 
-.navbar .navbar-nav>li>a {
-    color: white;
+.navbar-default .navbar-brand:hover {
+	color:white;
 }
 
-.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:focus, {
+.navbar .navbar-nav>li>a {
     color: white;
-    background-color: #94c4f4;
-    border: solid 2px white;    
 }
 
 .navbar .navbar-nav>li>a:hover {
@@ -226,9 +259,9 @@ ul.dropdown-menu {
     background-color: #b6b835;
 }
 
-.navbar .navbar-nav>.active>a:hover {
-	color: #94c4f4;
-	background-color: white;
+.navbar-nav li a:active {
+    color: white;
+    background-color: #b6b835;
 }
 
 .search {
@@ -252,6 +285,9 @@ ul.dropdown-menu {
 	background-color: #94c4f4;
 }
 
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: #94c4f4;
+}
 .dropdown-menu > li > a {
 	color: white;
 }

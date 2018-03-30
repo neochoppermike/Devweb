@@ -59,6 +59,8 @@ gem 'devise'
 
 gem 'cancancan', '~> 2.0'
 
+gem 'will_paginate', '~> 3.1.6'
+
 #gem to communicate with PostgreSQL database that Heroku runs- only needed by Heroku (production environment)
 group :production do
   gem 'pg'
