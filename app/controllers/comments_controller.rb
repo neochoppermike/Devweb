@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
         	format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
         	format.json { render json: @comment.errors, status: :unprocessable_entity }
         end
+      end  
 	end
 
 	def destroy
