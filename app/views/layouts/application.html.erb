@@ -33,7 +33,7 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "About us", static_pages_about_path, class: "active" %></li>
               <li><%= link_to "Contact our cows", static_pages_contact_path %></li>
               <li><%= link_to "The Cow Shed", products_path %></li>
@@ -62,23 +62,7 @@
                   </ul>
                 </li>
               <% end %>
-              
-                
-              
-                  
-              
             </ul>
-            
-            <div class="search">
-              <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form navbar-right") do |form| %>
-                
-                <div class="form-group"> 
-                  <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
-                </div>  
-                  
-                <%= form.submit 'Search', class: "btn btn-default" %>           
-              <% end %>
-            </div>
 
           </div> <!--/navbar collapse-->
         </div> <!--/container fluid-->
@@ -90,7 +74,7 @@
 
       
         <% if notice %>
-          <p class="alert alert-danger fades" role="alert" ><%= notice %></p>
+          <p class="alert alert-success fades" role="alert" ><%= notice %></p>
         <% end %>
         <% if alert %>
           <p class="alert alert-danger fades" role="alert"><%= alert %></p>
@@ -102,11 +86,25 @@
     </div>
 
     <footer>
-      <div class="site-footer">
-        <a href="https://twitter.com/neochopper" class="twitter-follow-button" data-show-count="false">Follow @twitter</a>
-        <div class="copyright">&copy Inter-Cow.com 2017</div>
+      <div class="container-fluid site-footer">
+        <div class="row">
+          <div class="col-md-6 copyright">
+              &copy; 2018 InterCow
+          </div>
+          <div class="col-sm-6 search">
+            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>                         
+              <div class="input-group"> 
+                <%= form.text_field :q, id: 'q', class: "form-control", value: params[:q], placeholder: "Search for..."   %>
+                
+                <span class="input-group-btn">              
+                <%= form.submit 'Search', class: "btn btn-default" %>
+                </span>  
+              </div>        
+            <% end %>                
+          </div>
+        </div>
       </div>
-    </footer>
+    </footer>  
 
   </body>
 </html>

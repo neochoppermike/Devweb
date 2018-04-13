@@ -7,4 +7,11 @@ class UserMailer < ApplicationMailer
          to: 'zuzuspetals@hotmail.co.uk',
          subject: "A new contact form message from #{name}")
   end
+
+  def signup_form(email)
+    mail(from: email,
+         to: 'zuzuspetals@hotmail.co.uk',
+         subject: "A new signup from #{email}")
+  end
+    
 end

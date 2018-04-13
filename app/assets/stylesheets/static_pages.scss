@@ -1,43 +1,22 @@
 /*-----------sticky footer-------------*/
 
-
-html, body {
-	height: 100%;
-}
-
-
-.page-wrap {
-	min-height: 100%;
-	margin-bottom: -80px;
-}
-
-.page-wrap:after {
-	content: "";
-	display: block;
-}
-
-.site-footer, .page-wrap:after {
-	height: 80px;
-}
-
-.site-footer {
-	background: #e42e1d;
-}
-
 .copyright {
-	float: right;
-	display: inline;
-	color: white;
+	margin-top: 2em;
 }
 
 .site-footer {
-	padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+	background: #e42e1d;
+	padding: 0 3em;
+	margin-top: 5em;
 }
 
-.twitter-follow-button {
-	color: white;
+.search {
+	margin-top: 2em;
 }
-
 
 /*---------------General---------------*/
 
@@ -90,8 +69,8 @@ p {
 	padding-left: 0;
 }
 
-.btn-default {
-	margin: 1em;
+.button {
+	margin: 1em 1em 1em 0;
 }
 
 .base {
@@ -135,82 +114,6 @@ p {
 /*----------------navbar---------------*/
 
 
-@media (min-width: 1176px) {
-
-.navbar-brand {
-	font-family: Satisfy;
-}
-
-.navbar-collapse ul li a {
-	font-family: Biryani;
-	font-size: 150%;
-}
-
-.navbar {	
-	background-color: #94c4f4;
-	height: 110px;
-}
-
-.navbar-header a {
-	font-size: 300%;
-	padding: 30px;
-}
-
-
-.navbar-default .navbar-brand {
-	color: #4d4d4d;
-}
-
-.navbar .navbar-nav>li>a {
-    color: white;
-    margin-top: 35px;
-}
-
-.navbar .navbar-nav>li>a:hover {
-    color: white;
-    background-color: #b6b835;
-}
-
-.navbar .navbar-nav>li>a:active {
-    color: white;
-    background-color: #b6b835;
-}
-
-.search {
-	margin-top: 30px;
-}
-
-.user_name {
-	font-family: Satisfy;
-	color: #4d4d4d;
-}
-
-.navbar .navbar-nav>li>a.dropdown-toggle:hover {
-	background-color: #94c4f4;
-}
-
-ul.dropdown-menu {
-	background-color: #94c4f4;
-}
-
-.navbar-default .navbar-nav > .open > a:focus {
-	background-color: #94c4f4;
-}
-
-.dropdown-menu > li > a {
-	color: white;
-}
-
-.dropdown-menu > li > a:hover {
-	color: white;
-    background-color: #b6b835;
-}
-}
-
-
-
-@media (max-width: 1175px) {
-
 .navbar-brand {
 	font-family: Satisfy;
 }
@@ -218,6 +121,7 @@ ul.dropdown-menu {
 .navbar .navbar-nav {
   display: inline-block;
   float: none; 
+  height: 80px;
 }
 
 .navbar .navbar-collapse {
@@ -225,7 +129,8 @@ ul.dropdown-menu {
 }
 
 .navbar .navbar-collapse ul {
-	margin-right: 50px;
+	margin-top: 20px;
+	margin-right: 20px;
 }
 
 .navbar-collapse ul li a {
@@ -264,9 +169,6 @@ ul.dropdown-menu {
     background-color: #b6b835;
 }
 
-.search {
-	margin-bottom: 10px;
-}
 
 .user_name {
 	font-family: Satisfy;
@@ -298,7 +200,7 @@ ul.dropdown-menu {
 }
 
 
-}
+
 
 
 /*----------------carousel------------*/
