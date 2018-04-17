@@ -5,15 +5,13 @@
     <%= render @products %>
 
     <div class="new-product-link">
-      <%= link_to 'New Product', new_product_path %>
+      <%= link_to 'New Product', new_product_path, class: "btn btn-default pull-right" %>
     </div>
   
   </div>
 </div>
+<div class="text-center">
+  <%= will_paginate @products %>
+</div>
 
-<p id="notice"><%= notice %></p>
-
-
-
-<br>
 

@@ -8,10 +8,11 @@ class UserMailer < ApplicationMailer
          subject: "A new contact form message from #{name}")
   end
 
-  def signup_form(email)
-    mail(from: email,
-         to: 'zuzuspetals@hotmail.co.uk',
-         subject: "A new signup from #{email}")
+  def welcome(user)
+    mail(from: 'zuzuspetals@hotmail.co.uk',
+         to: user.email,
+         subject: "Hi there!",
+         cc: 'zuzuspetals@hotmail.co.uk')
   end
     
 end

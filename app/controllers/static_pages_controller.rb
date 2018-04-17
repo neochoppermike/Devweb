@@ -14,10 +14,7 @@ class StaticPagesController < ApplicationController
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
-    ActionMailer::Base.mail(from: @email,
-      to: 'zuzuspetals@hotmail.co.uk',
-      subject: "A new contact form message from #{@name}",
-      body: @message).deliver_now
+    
 
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
@@ -25,9 +22,7 @@ class StaticPagesController < ApplicationController
   def hi_there
     @email = params[:email]
 
-    ActionMailer::Base.mail(from: @email,
-      to: 'zuzuspetals@hotmail.co.uk',
-      subject: "A new signup from #{@email}").deliver_now
+    
 
     UserMailer.signup_form(@email).deliver_now
   end  
