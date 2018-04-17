@@ -3,16 +3,16 @@ require 'rails_helper'
 
 
 describe UsersController, type: :controller do
-  let(:user) {User.create!(first_name: "Todd", last_name: "Sampson", email: "todd@yahoo.com", password: "bozobag")}
-  let(:user2) {User.create!(first_name: "Biff", last_name: "Simpson", email: "biff@yahoo.com", password: "yopeyo")}
-
+  #let(:user) {User.create!(first_name: "Todd", last_name: "Sampson", email: "todd@yahoo.com", password: "bozobag")}
+  #let(:user2) {User.create!(first_name: "Biff", last_name: "Simpson", email: "biff@yahoo.com", password: "yopeyo")}
+    
+    before do
+      @user = FactoryBot.create(:user)
+      @user2 = FactoryBot.create(:user)
+    end  
 
   describe 'GET #show' do
     context 'when a user is logged in' do
-
-      before do
-      	sign_in user
-      end  	
 
       it 'loads correct user details' do
         get :show, params: {id: user.id}
@@ -30,9 +30,6 @@ describe UsersController, type: :controller do
   
     context 'when user1 is signed in' do
 
-      before do
-        sign_in user
-      end
 
       it 'cannot access user2 data' do
         get :show, params: {id: user2.id}
@@ -42,9 +39,7 @@ describe UsersController, type: :controller do
   
     context 'when user1 attempts to access user2 data' do
       
-      before do
-        sign_in user
-      end
+     
 
       it 'redirects to root path ("redirection found" = HTTP status 302)' do
         get :show, params: {id: user2.id}
