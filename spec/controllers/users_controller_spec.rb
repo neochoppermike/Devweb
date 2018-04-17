@@ -46,9 +46,9 @@ describe UsersController, type: :controller do
         sign_in user
       end
 
-      it 'reports UNAUTHORIZED (HTTP status 401)' do
+      it 'redirects to root path ("redirection found" = HTTP status 302)' do
         get :show, params: {id: user2.id}
-        expect(response).to have_http_status(401)
+        expect(response).to have_http_status(302)
       end  
     end
   end 
