@@ -19,6 +19,10 @@
         £<%= @product.price %>	
       </p>
 
+      <div class="pay_button"><%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %></div>
+
       <% if @product.highest_rating_comment.present? %>
         <p>
           <strong>Average Customer Rating:</strong>
