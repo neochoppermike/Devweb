@@ -4,11 +4,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :products do
-    resources :comments  
+  resources :comments  
   end
   # nested resource because user reviews are associates with a specific product and so "comments" resources will be a subset of "products".
   
   resources :users
+
+  post 'payments/create'
 
   get 'static_pages/about'
 
@@ -19,9 +21,6 @@ Rails.application.routes.draw do
   post 'static_pages/thank_you'
 
   root 'static_pages#index'
-
-  
-
 
 end
 
