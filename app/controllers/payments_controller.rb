@@ -2,7 +2,7 @@ class PaymentsController < ApplicationController
 
   def create 
 
-  	@product = Product.find(params[:product_id])
+  	@product = params[:product_id]
 
   	@user = current_user
 
