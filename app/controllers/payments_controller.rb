@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
 	        total: @product.total
 	      )	
 	  
-	  redirect_to 'payments/create'
+	  redirect_to '/payments/create'
 
 	  end
 

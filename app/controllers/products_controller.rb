@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    byebug
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
@@ -33,6 +34,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    byebug
     @product = Product.new(product_params)
 
     respond_to do |format|
