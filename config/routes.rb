@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post 'payments/create'
 
+  get '/square-image.png'
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
