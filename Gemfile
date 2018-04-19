@@ -19,7 +19,23 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+#add jQuery javascript library 
+gem 'jquery-rails'
+
+gem 'devise'
+
+gem 'cancancan', '~> 2.0'
+
+gem 'will_paginate', '~> 3.1.6'
+
+gem 'stripe'
+
+gem 'brakeman'
+
+gem 'rails-html-sanitizer', '~> 1.0', '>= 1.0.4'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -52,20 +68,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-#add jQuery javascript library 
-gem 'jquery-rails'
-
-gem 'devise'
-
-gem 'cancancan', '~> 2.0'
-
-gem 'will_paginate', '~> 3.1.6'
-
-gem 'stripe'
 
 #gem to communicate with PostgreSQL database that Heroku runs- only needed by Heroku (production environment)
 group :production do

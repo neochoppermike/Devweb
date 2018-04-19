@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
+  skip_authorize_resource :only => [:show, :index]
   # GET /products
   # GET /products.json
   def index
@@ -57,12 +58,13 @@ class ProductsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
-    end
+    end   
   end
 
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
+    
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
