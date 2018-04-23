@@ -1,7 +1,6 @@
-
-$(document).on('turbolinks:load', function(){
-  
 /*raty js*/
+
+var refreshRating = function() {
 
   $('.rating').raty({
   starHalf: '<%= asset_path 'star-half.png' %>',
@@ -19,6 +18,14 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+};
+
+
+
+$(document).on('turbolinks:load', function(){
+  
+  
+  refreshRating();
 
 /*elevate zoom js*/
 
