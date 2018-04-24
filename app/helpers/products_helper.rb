@@ -1,4 +1,4 @@
-module ProductsHelper
+
   module ProductsHelper
 	  def cache_key_for_products
 	    count          = @products
@@ -6,4 +6,4 @@ module ProductsHelper
 	    "products/all-#{count}-#{max_updated_at}"
 	  end
   end
-end
+
