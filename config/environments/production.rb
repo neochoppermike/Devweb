@@ -100,5 +100,9 @@ Rails.application.configure do
   password: ENV['SENDGRID_PASSWORD'],
   domain: 'heroku.com',
   enable_starttls_auto: true
-}
+  }
+  
+  config.web_socket_server_url = "wss://sellyourstuff.herokuapp.com/cable"
+config.action_cable.allowed_request_origins = ['https://sellyourstuff.herokuapp.com', 'http://sellyourstuff.herokuapp.com']
+
 end

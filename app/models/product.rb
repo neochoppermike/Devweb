@@ -28,6 +28,9 @@ class Product < ApplicationRecord
       comments.average(:rating).to_f
   end
 
+  def viewed
+    $redis.incr("product:#{id}") #'INCR product:1'
+  end
 
 end
 
