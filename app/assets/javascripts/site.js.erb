@@ -29,7 +29,11 @@ $(document).on('turbolinks:load', function(){
 
 /*elevate zoom js*/
 
-  $(".zoom").elevateZoom();
+  $(".zoom").elevateZoom({
+    zoomType  : "lens",
+    lensShape : "square",
+    lensSize  : 200
+  });
 
 
 });
