@@ -29,14 +29,12 @@
 
       
        
-
-
       <div class="pay_button">
-        <%= form_with(url: '/payments/create') do |form| %>
-          <%= hidden_field_tag ':product_id', '@product.id' %>
-          <%= render partial: "shared/stripe_checkout_button" %>
-        <% end %>
-        
+      <% if current_user.present? %>
+        <%= render partial: "shared/stripe_checkout_button" %>  
+      <% else %>
+        <%= render partial: "shared/signin_to_buy" %>  
+      <% end %>  
       </div>
 
       <% if @product.highest_rating_comment.present? %>
@@ -75,10 +73,15 @@
   </div>
 
 
-<!--<%= link_to 'Edit', edit_product_path(@product) %> |
+  <% if current_user && current_user.admin? %>
+      
+      
+    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default pull-right" %>
 
-<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %> --> 
+    <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default pull-right" %>
 
+  <% end %>
+ 
 
   <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 

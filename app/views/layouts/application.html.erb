@@ -37,7 +37,7 @@
               <li><%= link_to "About us", static_pages_about_path, class: "active" %></li>
               <li><%= link_to "Contact our cows", static_pages_contact_path %></li>
               <li><%= link_to "The Cow Shed", products_path %></li>
-              <li><%= link_to "Buy a Cow", orders_path %></a></li>
+              <li><%= link_to "Orders", orders_path %></a></li>
               <li>
                 <% if user_signed_in? %>
                   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>

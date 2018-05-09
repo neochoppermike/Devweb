@@ -2,7 +2,7 @@ class PaymentsController < ApplicationController
 
   def create 
 
-  	@product = params[:product_id]
+  	@product = Product.find(params[:product_id])
 
   	@user = current_user
 
@@ -21,10 +21,11 @@ class PaymentsController < ApplicationController
 	      Order.create(
 	        product_id: @product.id,
 	        user_id: @user.id,
-	        total: @product.total
+	        total: @product.price
 	      )	
 	  
-	  redirect_to '/payments/create'
+
+        redirect_to payments_purchase_path
 
 	  end
 
@@ -40,8 +41,7 @@ class PaymentsController < ApplicationController
   		puts "Error with: #{err[:param]}" if err[:param]
   		puts "Message is: #{err[:message]}" if err[:message]
 
-  		redirect_to product_path(@product)
-
+        redirect_to product_path(@product) 
 	  end
 
   end
