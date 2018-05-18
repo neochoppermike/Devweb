@@ -18,18 +18,16 @@ class PaymentsController < ApplicationController
 	    )
 
 	    if charge.paid
-	      Order.create(
+	      order = Order.create(
 	        product_id: @product.id,
 	        user_id: @user.id,
 	        total: @product.price
 	      )	
 	  
-
-        redirect_to payments_purchase_path
+	      UserMailer.order_placed(@user, order).deliver_now
+          redirect_to payments_purchase_path
 
 	  end
-
-
 
 	  rescue Stripe::CardError => e
 	    # The card has been declined  

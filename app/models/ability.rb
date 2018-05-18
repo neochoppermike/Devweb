@@ -8,6 +8,8 @@ class Ability
     cannot :destroy 
     if user.admin?
       can :manage, :all
+    else
+      can [:read, :update], Order, :user_id => user.id  
     end
   end
 end

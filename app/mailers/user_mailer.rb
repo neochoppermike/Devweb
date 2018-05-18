@@ -15,4 +15,15 @@ class UserMailer < ApplicationMailer
          cc: 'zuzuspetals@hotmail.co.uk')
   end
     
+  def order_placed(user, order)
+    @user = user
+    @order = order
+    @product = order.product
+
+    mail(from: 'zuzuspetals@hotmail.co.uk',
+         to: user.email,
+         subject: "Payment received",
+         cc: 'zuzuspetals@hotmail.co.uk')
+  end
+
 end

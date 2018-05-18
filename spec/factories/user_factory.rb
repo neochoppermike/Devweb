@@ -12,11 +12,11 @@ FactoryBot.define do
   end
 
   factory :admin, class: User do
-  email 
-  password "qwertyuiop"
-  admin true
-  first_name "Admin"
-  last_name "User"
+    email 
+    password "qwertyuiop"
+    admin true
+    first_name "Admin"
+    last_name "User"
   end
   
 end  
